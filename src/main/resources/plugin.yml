@@ -1,0 +1,4 @@
+name: HamoxAPI
+version: 1.0-SNAPSHOT
+author: haxzee
+main: net.haxzee.hamoxapi.HamoxService
