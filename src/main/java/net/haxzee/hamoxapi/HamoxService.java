@@ -1,17 +1,16 @@
 package net.haxzee.hamoxapi;
 
-import net.haxzee.hamoxapi.databaseutils.MySQLDatabaseDriver;
+import net.haxzee.hamoxapi.databaseutils.SQLConnector;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class HamoxService extends JavaPlugin {
     private static HamoxService instance;
 
-    private MySQLDatabaseDriver mySQLDatabaseDriver;
+    private SQLConnector sqlConnector;
 
     @Override
     public void onEnable() {
         instance = this;
-        this.mySQLDatabaseDriver = new MySQLDatabaseDriver();
     }
 
     @Override
@@ -23,7 +22,7 @@ public class HamoxService extends JavaPlugin {
         return instance;
     }
 
-    public MySQLDatabaseDriver getMySQLDatabaseDriver() {
-        return mySQLDatabaseDriver;
+    public SQLConnector getSqlConnector() {
+        return sqlConnector;
     }
 }
