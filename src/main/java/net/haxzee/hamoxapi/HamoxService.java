@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class HamoxService extends JavaPlugin {
     private static HamoxService instance;
 
-    private SQLConnector sqlConnector;
+    private static SQLConnector sqlConnector;
 
     @Override
     public void onEnable() {
@@ -22,7 +22,7 @@ public class HamoxService extends JavaPlugin {
         return instance;
     }
 
-    public SQLConnector getSqlConnector() {
+    public static SQLConnector getSqlConnector() {
         return sqlConnector;
     }
 }
